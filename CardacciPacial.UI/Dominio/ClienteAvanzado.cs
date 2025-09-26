@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using CardacciPacial.UI.Dominio;
 
 namespace CardacciPacial.UI.Clases
 {
-    internal class ClienteAvanzado : Cliente
+    public class ClienteAvanzado : Cliente
     {
-        public override decimal AbonarCuota(Cuota cuota)
+        public override float AbonarCuota(Cuota cuota)
         {
-            throw new NotImplementedException();
+            cuota.Precio = cuota.Precio - (cuota.Precio * ObtenerDescuento() / 100);
+            return cuota.Precio;
+        }
+        public override float ObtenerDescuento()
+        {
+            return 100 * 0.03f;
         }
     }
 }

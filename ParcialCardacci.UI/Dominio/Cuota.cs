@@ -1,7 +1,10 @@
 ﻿using System;
-using CardacciPacial.UI.Clases;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CardacciPacial.UI.Dominio
+namespace ParcialCardacci.UI.Dominio
 {
     public class Cuota
     {

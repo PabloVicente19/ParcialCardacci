@@ -1,6 +1,10 @@
-﻿using CardacciPacial.UI.Dominio;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CardacciPacial.UI.Clases
+namespace ParcialCardacci.UI.Dominio
 {
     public class ClientePrincipiante : Cliente
     {

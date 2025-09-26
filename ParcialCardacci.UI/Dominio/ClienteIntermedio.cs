@@ -1,18 +1,21 @@
-﻿using CardacciPacial.UI.Dominio;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CardacciPacial.UI.Clases
+namespace ParcialCardacci.UI.Dominio
 {
-    public class ClientePrincipiante : Cliente
+    public class ClienteIntermedio : Cliente
     {
         public override float AbonarCuota(Cuota cuota)
         {
             cuota.Precio = cuota.Precio - (cuota.Precio * ObtenerDescuento() / 100);
             return cuota.Precio;
         }
-
         public override float ObtenerDescuento()
         {
-            return 100 * 0.15f;
+            return 100 * 0.08f;
         }
     }
 }
