@@ -169,6 +169,7 @@ namespace ParcialCardacci.UI
             Membresia membresia = GenerarMembresia();
             _cliente.AsignarMembresia(membresia);
             _listaDeMembresias.Add(membresia);
+            dgvMembresias.DataSource = null;
             dgvMembresias.DataSource = _listaDeMembresias;
         }
         private void EliminarMembresia(Membresia membresiaSeleccionada)

@@ -47,15 +47,27 @@
             label6 = new Label();
             txtCodigoMembresia = new TextBox();
             groupBox2 = new GroupBox();
+            textBox4 = new TextBox();
+            label11 = new Label();
+            textBox3 = new TextBox();
+            label10 = new Label();
+            textBox2 = new TextBox();
+            label9 = new Label();
+            textBox1 = new TextBox();
+            label8 = new Label();
+            button1 = new Button();
             btnModificarCliente = new Button();
             btnEliminarCliente = new Button();
             dgvClientes = new DataGridView();
             dgvMembresias = new DataGridView();
             btnEliminarMembresia = new Button();
+            dgvTodo = new DataGridView();
             gbDatosCliente.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMembresias).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTodo).BeginInit();
             SuspendLayout();
             // 
             // gbDatosCliente
@@ -231,13 +243,96 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(textBox4);
+            groupBox2.Controls.Add(label11);
+            groupBox2.Controls.Add(textBox3);
+            groupBox2.Controls.Add(label10);
+            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(textBox1);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Controls.Add(button1);
             groupBox2.ForeColor = Color.WhiteSmoke;
             groupBox2.Location = new Point(12, 404);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(325, 181);
+            groupBox2.Size = new Size(325, 246);
             groupBox2.TabIndex = 12;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Membresia";
+            groupBox2.Text = "pago";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(197, 154);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 23);
+            textBox4.TabIndex = 22;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(197, 136);
+            label11.Name = "label11";
+            label11.Size = new Size(32, 15);
+            label11.TabIndex = 21;
+            label11.Text = "Total";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(13, 160);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 23);
+            textBox3.TabIndex = 20;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(13, 142);
+            label10.Name = "label10";
+            label10.Size = new Size(103, 15);
+            label10.TabIndex = 19;
+            label10.Text = "Descuento Cliente";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(13, 109);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 18;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(13, 91);
+            label9.Name = "label9";
+            label9.Size = new Size(125, 15);
+            label9.TabIndex = 17;
+            label9.Text = "Descuento Membresia";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(13, 52);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 16;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(13, 34);
+            label8.Name = "label8";
+            label8.Size = new Size(43, 15);
+            label8.TabIndex = 15;
+            label8.Text = "Monto";
+            // 
+            // button1
+            // 
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(197, 213);
+            button1.Name = "button1";
+            button1.Size = new Size(122, 27);
+            button1.TabIndex = 14;
+            button1.Text = "Pagar";
+            button1.UseVisualStyleBackColor = true;
             // 
             // btnModificarCliente
             // 
@@ -288,12 +383,21 @@
             btnEliminarMembresia.UseVisualStyleBackColor = true;
             btnEliminarMembresia.Click += btnEliminarMembresia_Click;
             // 
+            // dgvTodo
+            // 
+            dgvTodo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTodo.Location = new Point(343, 540);
+            dgvTodo.Name = "dgvTodo";
+            dgvTodo.Size = new Size(695, 161);
+            dgvTodo.TabIndex = 17;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1050, 755);
+            Controls.Add(dgvTodo);
             Controls.Add(btnEliminarMembresia);
             Controls.Add(dgvMembresias);
             Controls.Add(btnEliminarCliente);
@@ -309,8 +413,11 @@
             gbDatosCliente.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvMembresias).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTodo).EndInit();
             ResumeLayout(false);
         }
 
@@ -339,5 +446,15 @@
         private Label label7;
         private TextBox txtValorMembresia;
         private Button btnEliminarMembresia;
+        private Button button1;
+        private DataGridView dgvTodo;
+        private TextBox textBox4;
+        private Label label11;
+        private TextBox textBox3;
+        private Label label10;
+        private TextBox textBox2;
+        private Label label9;
+        private TextBox textBox1;
+        private Label label8;
     }
 }
