@@ -8,15 +8,22 @@ namespace ParcialCardacci.UI.Dominio
 {
     public class ClientePrincipiante : Cliente
     {
-        public override float AbonarCuota(Cuota cuota)
+        public ClientePrincipiante() : base()
         {
-            cuota.Precio = cuota.Precio - (cuota.Precio * ObtenerDescuento() / 100);
-            return cuota.Precio;
+            
+        }
+        public override float AbonarCuota(double valorCuota)
+        {
+            //cuota.Precio = cuota.Precio - (cuota.Precio * ObtenerDescuento() / 100);
+            //return cuota.Precio;
+            throw new NotImplementedException();
         }
 
         public override float ObtenerDescuento()
         {
-            return 100 * 0.15f;
+            //return 100 * 0.15f;
+            throw new NotImplementedException();
+
         }
     }
 }

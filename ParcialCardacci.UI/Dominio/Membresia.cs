@@ -8,9 +8,15 @@ namespace ParcialCardacci.UI.Dominio
 {
     public class Membresia
     {
-        public string MembresiaId { get; set; }
+        public string Codigo { get; private set; }
         public DateTime FechaInicio { get; set; }
-        public double Valor { get; set; }
-        public byte Descuento { get; private set; }
+        public short ValorDeDescuento { get; set; }
+
+        public Membresia(string codigo, short descuento, DateTime fechaInicio)
+        {
+            Codigo = codigo;
+            ValorDeDescuento = descuento;
+            FechaInicio = fechaInicio;
+        }
     }
 }

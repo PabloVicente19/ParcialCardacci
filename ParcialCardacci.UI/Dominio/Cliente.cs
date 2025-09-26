@@ -12,8 +12,23 @@ namespace ParcialCardacci.UI.Dominio
         public int ClienteId { get; private set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+        public string Dni { get; set; }
+        public double Cuota { get; set; }
+        public Membresia Membresia { get; set; }
+        public Cliente()
+        {
+            ClienteId = ++_clienteId;
+        }
 
-        public abstract float AbonarCuota(Cuota cuota);
+        public void AsignarMembresia(Membresia membresia)
+        {
+            Membresia = membresia;
+        }
+        public void EliminarMembresia() => Membresia = null;
+        
+        // Metodos Polimorficos
+        public abstract float AbonarCuota(double valorCuota);
         public abstract float ObtenerDescuento();
+
     }
 }
